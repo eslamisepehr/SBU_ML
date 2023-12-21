@@ -468,3 +468,65 @@ The Ridge Regression estimate for the coefficients can be expressed as:
 
 Ridge Regression provides a valuable tool in linear regression when dealing with multicollinearity and the need for regularization to prevent overfitting.
 
+
+# Ridge Regression vs Least Squares
+
+| Aspect                            | Ordinary Least Squares (OLS)                               | Ridge Regression                                         |
+|-----------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
+| **Objective Function**             | Minimize the sum of squared residuals                       | Minimize the sum of squared residuals + $$\(\lambda \sum_{j=1}^{p} \beta_j^2\)$$ |
+| **Multicollinearity Handling**    | Prone to instability in the presence of multicollinearity   | Stabilizes coefficient estimates in multicollinearity      |
+| **Overfitting Prevention**        | May overfit when the number of predictors is large          | Mitigates overfitting, especially in high-dimensional space |
+| **Bias-Variance Trade-off**       | High variance in coefficient estimates                        | Balances bias and variance through regularization          |
+| **Numerical Stability**           | May face numerical instability in the presence of multicollinearity | Improved numerical stability                             |
+| **Equal Treatment of Predictors** | Treats predictors equally                                   | Provides more equal treatment of predictors                 |
+
+
+
+# Lasso Regression
+
+Lasso, which stands for Least Absolute Shrinkage and Selection Operator, is a linear regression technique that introduces a regularization term to the ordinary least squares (OLS) objective function. Lasso is particularly useful when dealing with high-dimensional datasets or situations where there are many predictor variables. Similar to Ridge Regression, Lasso helps prevent overfitting and improves the stability of coefficient estimates.
+
+### Objective Function of Lasso:
+
+The Lasso objective function is expressed as follows:
+
+$$\[ \text{Minimize} \left( \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right) \]$$
+
+- $\(n\)$ is the number of observations.
+- $\(p\)$ is the number of predictors.
+- $\(y_i\)$ is the observed value for the \(i\)-th observation.
+- $\(\beta_0, \beta_1, \ldots, \beta_p\)$ are the coefficients to be estimated.
+- $\(x_{ij}\)$ is the value of the $\(j\)$-th predictor for the $\(i\)$-th observation.
+- The first term represents the ordinary least squares (OLS) part, aiming to minimize the sum of squared residuals.
+- The second term, $$\(\lambda \sum_{j=1}^{p} |\beta_j|\)$$, is the regularization term, where $\(\lambda\)$ is the regularization parameter.
+
+### Key Characteristics of Lasso:
+
+1. **Regularization Term:**
+   - The regularization term $$\(\lambda \sum_{j=1}^{p} |\beta_j|\)$$ introduces a penalty for the absolute values of the coefficients.
+   - The parameter $\(\lambda\)$ controls the strength of the regularization. A higher $\(\lambda\)$ leads to more aggressive shrinking of coefficients.
+
+2. **Shrinkage Effect:**
+   - Lasso Regression tends to shrink the estimated coefficients toward exactly zero. It has a built-in feature for variable selection, as it can lead to sparse models with some coefficients being exactly zero.
+
+3. **Variable Selection:**
+   - Lasso is effective in situations where feature selection is important. It can automatically select a subset of relevant predictors by setting some coefficients to zero.
+
+4. **Multicollinearity:**
+   - Like Ridge Regression, Lasso is useful for addressing multicollinearity, as it can provide stable estimates in the presence of correlated predictors.
+
+### Advantages and Considerations:
+
+- Lasso is beneficial when dealing with high-dimensional datasets with many predictors.
+- It can be used for feature selection, leading to simpler and more interpretable models.
+- The choice of the regularization parameter $(\(\lambda\))$ is crucial and is often determined through cross-validation.
+
+### Lasso Formula:
+
+The Lasso Regression estimate for the coefficients can be expressed as:
+
+```math
+\hat{\beta}_{\text{lasso}} = \text{argmin} \left( \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} |\beta_j| \right)
+```
+
+Lasso Regression provides a valuable tool in linear regression when dealing with high-dimensional data, automatic feature selection, and the need for regularization to prevent overfitting.
