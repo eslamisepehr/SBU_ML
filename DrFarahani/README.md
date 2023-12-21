@@ -415,3 +415,56 @@ In the context of statistical modeling and regression analysis, there are three 
 - These methods help in addressing issues like multicollinearity, overfitting, and the curse of dimensionality.
 
 In practice, a combination of these methods or a careful evaluation based on the characteristics of the dataset is often employed to arrive at an effective and interpretable model.
+
+
+# Ridge Regression
+
+Ridge Regression, also known as Tikhonov regularization or L2 regularization, is a linear regression technique that addresses some of the limitations of ordinary least squares (OLS) regression. It is particularly useful when dealing with multicollinearity, which occurs when predictor variables in a regression model are highly correlated. Ridge Regression introduces a regularization term to the linear regression objective function to prevent overfitting and improve the stability of the coefficient estimates.
+
+### Objective Function of Ridge Regression:
+
+The objective function of Ridge Regression is to find the values of coefficients (\(\beta\)) that minimize the sum of squared differences between the observed and predicted values, while penalizing the magnitudes of the coefficients. The Ridge Regression objective function is expressed as:
+
+$$\[ \text{Minimize} \left( \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} \beta_j^2 \right) \]$$
+
+- $\(n\)$ is the number of observations.
+- $\(p\)$ is the number of predictors.
+- $\(y_i\)$ is the observed value for the $\(i\)$-th observation.
+- $\(\beta_0, \beta_1, \ldots, \beta_p\)$ are the coefficients to be estimated.
+- $\(x_{ij}\)$ is the value of the \(j\)-th predictor for the $\(i\)$-th observation.
+- The first term represents the ordinary least squares (OLS) part, aiming to minimize the sum of squared residuals.
+- The second term, $$\(\lambda \sum_{j=1}^{p} \beta_j^2\)$$, is the regularization term, where $\(\lambda\)$ is the regularization parameter.
+
+### Key Characteristics of Ridge Regression:
+
+1. **Regularization Term:**
+   - The regularization term $$\(\lambda \sum_{j=1}^{p} \beta_j^2\)$$ penalizes the magnitudes of the coefficients.
+   - The parameter $\(\lambda\)$ controls the strength of the regularization. A higher $\(\lambda\)$ leads to more aggressive shrinking of coefficients.
+
+2. **Shrinkage Effect:**
+   - Ridge Regression shrinks the estimated coefficients toward zero, but it does not lead to exact zero coefficients (unless $\(\lambda\)$ is very large).
+
+3. **Multicollinearity:**
+   - Ridge Regression is particularly useful when multicollinearity is present among predictor variables.
+   - It stabilizes the estimates when predictors are highly correlated.
+
+4. **Trade-off between Fit and Complexity:**
+   - The regularization term introduces a trade-off between fitting the data well and keeping the model simple.
+   - It helps prevent overfitting, especially in situations with a large number of predictors.
+
+### Advantages and Considerations:
+
+- Ridge Regression is suitable for situations where multicollinearity is a concern.
+- It is robust and stable, providing better performance in scenarios with high correlations among predictors.
+- The choice of the regularization parameter $(\(\lambda\))$ is crucial and is often determined through cross-validation.
+
+### Ridge Regression Formula:
+
+The Ridge Regression estimate for the coefficients can be expressed as:
+
+```math
+\hat{\beta}_{\text{ridge}} = \text{argmin} \left( \sum_{i=1}^{n} (y_i - \beta_0 - \sum_{j=1}^{p} \beta_j x_{ij})^2 + \lambda \sum_{j=1}^{p} \beta_j^2 \right)
+```
+
+Ridge Regression provides a valuable tool in linear regression when dealing with multicollinearity and the need for regularization to prevent overfitting.
+
