@@ -578,3 +578,26 @@ The decision boundary of a logistic regression model is the hypersurface that se
 - Credit scoring.
 
 Logistic regression is a powerful and interpretable algorithm, but it is limited to binary classification tasks. For multi-class classification, extensions like multinomial logistic regression are often used.
+
+
+
+# Linear vs Logistic Regression
+
+| Aspect                              | Linear Regression                                     | Logistic Regression                                 |
+|-------------------------------------|--------------------------------------------------------|-----------------------------------------------------|
+| **Type of Problem**                  | Regression: Predicts a continuous outcome              | Classification: Predicts the probability of a binary outcome |
+| **Response Variable**                | Continuous (numeric)                                  | Binary (categorical)                                |
+| **Objective Function**               | Minimize the sum of squared residuals                 | Maximize the likelihood function using logistic/sigmoid function |
+| **Output Range**                     | $\(-\infty\) to \(+\infty\)$                           | $\(0\)$ to $\(1\)$ (probability)                         |
+| **Equation**                         | $\(Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_n X_n\)$   | $\(P(Y=1 &#124; X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \ldots + \beta_n X_n)}}\)$ |
+| **Assumption on Residuals**          | Residuals should be normally distributed              | Residuals follow a Bernoulli distribution           |
+| **Cost Function for Training**       | Mean Squared Error (MSE)                              | Cross-entropy loss (log loss)                       |
+| **Performance Evaluation Metric**    | Mean Squared Error (MSE)                              | Accuracy, Precision, Recall, F1 Score               |
+| **Use Case**                        | Predicting numeric values (e.g., house prices)        | Binary classification tasks (e.g., spam detection)  |
+| **Extensions for Multiclass**        | One-vs-All or One-vs-One strategies                  | Multinomial Logistic Regression                     |
+| **Regularization**                   | Ridge, Lasso, Elastic Net (for regularization)        | Ridge (L2 regularization), Lasso (L1 regularization) |
+| **Interpretability of Coefficients**| Easily interpretable as the change in $\(Y\)$ per unit change in $\(X\)$ | Interpretation is related to the odds ratio and log-odds |
+| **Example**                         | Predicting house prices based on features like square footage, number of bedrooms | Predicting whether an email is spam based on features like word frequency |
+
+This table summarizes some of the key differences between Linear Regression and Logistic Regression in terms of their use cases, assumptions, equations, and evaluation metrics. Keep in mind that the choice between the two depends on the nature of the problem and the type of outcome variable.
+
