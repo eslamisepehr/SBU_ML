@@ -323,3 +323,50 @@ The t-statistic is calculated using the formula mentioned earlier. The p-value i
 
 In summary, the null hypothesis represents the status quo, the t-statistic quantifies the difference between the sample and null hypothesis, and the p-value provides a measure of the evidence against the null hypothesis in hypothesis testing.
 
+
+
+# Investigating Difference in Credit Card Balance Between Males and Females
+
+In this analysis, we aim to investigate the difference in credit card balance between males and females. The qualitative predictor is gender, which is a nominal variable with two categories: Male and Female.
+
+### Dummy Coding Approach
+
+We will use dummy coding to represent the gender variable. Two binary (dummy) variables are created for gender:
+
+$$\ X_{\text{Female}} =
+\begin{cases}
+    1 & \text{if gender = Female} \\
+    0 & \text{otherwise}
+\end{cases}
+\$$
+
+$$\ X_{\text{Male}} =
+\begin{cases}
+    1 & \text{if gender = Male} \\
+    0 & \text{otherwise}
+\end{cases}
+\$$
+
+The regression model to investigate the difference in credit card balance becomes:
+
+$$\[ \text{Credit Card Balance} = \beta_0 + \beta_1 X_{\text{Female}} + \beta_2 X_{\text{Male}} + \epsilon \]$$
+
+Here:
+- $\(\beta_0\)$ is the intercept, representing the average credit card balance for males (the reference category).
+- $\(\beta_1\)$ is the coefficient for $\(X_{\text{Female}}\)$, representing the difference in average credit card balance between females and males.
+
+If $\(\beta_1\)$ is significantly different from zero, it suggests that there is a significant difference in credit card balance between males and females.
+
+### Example Regression Model
+
+$$\[ \text{Credit Card Balance} = \beta_0 + \beta_1 X_{\text{Female}} + \beta_2 X_{\text{Male}} + \epsilon \]$$
+
+This model allows us to estimate the average credit card balance for females $(\(\beta_0 + \beta_1\))$ and the average credit card balance for males $(\(\beta_0\))$. The difference $\(\beta_1\)$ represents the estimated effect of being female on credit card balance.
+
+### Interpretation
+
+- If $\(\beta_1\)$ is positive and statistically significant, it suggests that, on average, females have a higher credit card balance compared to males.
+- If $\(\beta_1\)$ is negative and statistically significant, it suggests that, on average, females have a lower credit card balance compared to males.
+- If $\(\beta_1\)$ is not statistically significant, there is no evidence of a significant difference in credit card balance between males and females.
+
+This approach allows for a straightforward investigation of the gender difference in credit card balance while controlling for the reference category (males). The choice between dummy coding and effect coding depends on the specific requirements of the analysis and the interpretation of coefficients.
