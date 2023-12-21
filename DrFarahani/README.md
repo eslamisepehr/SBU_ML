@@ -603,3 +603,31 @@ This table summarizes some of the key differences between Linear Regression and 
 
 
 # Maximum Likelihood
+
+
+# Multinomial Logistic Regression
+
+Multinomial Logistic Regression, also known as softmax regression, is an extension of logistic regression that can handle multiple classes directly. Instead of training separate models for each class, a single model with multiple output nodes is trained, each corresponding to a different class. This approach is particularly suitable for problems with more than two classes.
+
+### Mathematical Formulation:
+
+The probability of an observation belonging to class $\(i\)$ given the features $\(X\)$ is modeled as:
+
+$$\[ P(Y = i | X) = \frac{\exp(\beta_{i0} + \beta_{i1} X_1 + \ldots + \beta_{ip} X_p)}{\sum_{k=1}^{K} \exp(\beta_{k0} + \beta_{k1} X_1 + \ldots + \beta_{kp} X_p)}, \]$$
+
+where:
+- $\(Y\)$ represents the class,
+- $\(X\)$ is the feature vector,
+- $\(K\)$ is the number of classes,
+- $\(\beta_{ij}\)$ are the model parameters.
+
+The denominator in the equation ensures that the probabilities sum to 1 across all classes. The class with the highest probability is chosen as the predicted class for a given observation.
+
+### Key Considerations:
+
+- **Efficiency:** Multinomial Logistic Regression is often computationally more efficient than approaches like One-vs-All or One-vs-One for a large number of classes.
+
+- **Interpretability:** This approach provides direct probabilities for each class, allowing for a straightforward interpretation of the model's output.
+
+In practice, various optimization algorithms can be used to find the optimal values for the model parameters. The `LogisticRegression` class in scikit-learn (Python library) supports multinomial logistic regression through the `multi_class` parameter.
+
