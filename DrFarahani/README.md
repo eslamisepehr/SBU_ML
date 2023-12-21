@@ -601,3 +601,5 @@ Logistic regression is a powerful and interpretable algorithm, but it is limited
 
 This table summarizes some of the key differences between Linear Regression and Logistic Regression in terms of their use cases, assumptions, equations, and evaluation metrics. Keep in mind that the choice between the two depends on the nature of the problem and the type of outcome variable.
 
+
+# Maximum Likelihood
