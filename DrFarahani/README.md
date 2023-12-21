@@ -530,3 +530,51 @@ The Lasso Regression estimate for the coefficients can be expressed as:
 ```
 
 Lasso Regression provides a valuable tool in linear regression when dealing with high-dimensional data, automatic feature selection, and the need for regularization to prevent overfitting.
+
+
+
+# Logistic Regression
+
+Logistic Regression is a statistical method used for binary classification problems, where the response variable has two possible outcomes or classes. Despite its name, logistic regression is a classification algorithm, not a regression algorithm. It's widely used in various fields for tasks such as spam detection, medical diagnosis, and credit scoring.
+
+### Logistic Regression Model:
+
+In logistic regression, the logistic function (also known as the sigmoid function) is used to model the probability that a given input belongs to a particular class. The logistic function maps any real-valued number to the range [0, 1]. The logistic regression model is expressed as:
+
+$$\[ P(Y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \ldots + \beta_n X_n)}} \]$$
+
+- $\( P(Y=1|X) \)$ is the probability that the response variable $\( Y \)$ is equal to 1 given the input $\( X \)$.
+- $\( \beta_0, \beta_1, \ldots, \beta_n \)$ are the coefficients to be estimated.
+- $\( X_1, X_2, \ldots, X_n \)$ are the input features.
+- The logistic function $\( \frac{1}{1 + e^{-z}} \)$ transforms the linear combination of inputs and coefficients $(\( z = \beta_0 + \beta_1 X_1 + \ldots + \beta_n X_n \))$ to a probability between 0 and 1.
+
+### Training Logistic Regression:
+
+The logistic regression model is trained by finding the optimal values for the coefficients $(\( \beta_0, \beta_1, \ldots, \beta_n \))$. This is typically done using optimization algorithms that minimize a cost function, such as the cross-entropy loss.
+
+### Decision Boundary:
+
+The decision boundary of a logistic regression model is the hypersurface that separates the space into regions where one class or the other is predicted. The decision boundary is determined by the values of the coefficients in the logistic regression equation.
+
+### Key Characteristics:
+
+1. **Probabilistic Output:**
+   - Logistic regression outputs probabilities that an instance belongs to a particular class. The decision is made by setting a threshold (e.g., 0.5), above which the instance is classified as one class and below which it is classified as the other.
+
+2. **Linear Relationship:**
+   - The logistic regression model assumes a linear relationship between the input features and the log-odds of the response variable.
+
+3. **Interpretability:**
+   - The coefficients in logistic regression provide insights into the impact of each feature on the probability of the positive class.
+
+4. **Assumption of Independence:**
+   - Logistic regression assumes that the observations are independent of each other.
+
+### Applications:
+
+- Binary classification problems (e.g., spam detection, fraud detection).
+- Probability estimation tasks.
+- Medical diagnosis.
+- Credit scoring.
+
+Logistic regression is a powerful and interpretable algorithm, but it is limited to binary classification tasks. For multi-class classification, extensions like multinomial logistic regression are often used.
