@@ -209,3 +209,57 @@ Where:
 
 Simple Linear Regression provides a straightforward way to model and understand the relationship between two variables. It serves as a foundational concept for more complex regression analyses involving multiple predictors (Multiple Linear Regression).
 
+
+
+# Multiple Linear Regression
+
+Multiple Linear Regression is an extension of Simple Linear Regression, where the relationship between a dependent variable and multiple independent variables is modeled through a linear equation. The goal is to find the best-fitting linear equation that predicts the values of the dependent variable based on the values of two or more independent variables. The general form of the Multiple Linear Regression model is:
+
+$$\[ \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_n x_n \]$$
+
+Here:
+- $\( \hat{y} \)$ is the predicted value of the dependent variable.
+- $\( x_1, x_2, \ldots, x_n \)$ are the independent variables.
+- $\( \beta_0 \)$ is the y-intercept.
+- $\( \beta_1, \beta_2, \ldots, \beta_n \)$ are the coefficients representing the change in the dependent variable for a one-unit change in each corresponding independent variable.
+
+### Key Concepts:
+
+1. **Independent Variables $(\(x_1, x_2, \ldots, x_n\))$:**
+   - Multiple Linear Regression deals with two or more independent variables. Each independent variable contributes to the prediction of the dependent variable.
+
+2. **Model Parameters $(\(\beta_0, \beta_1, \ldots, \beta_n\))$:**
+   - The model parameters represent the intercept $(\(\beta_0\))$ and slopes $(\(\beta_1, \beta_2, \ldots, \beta_n\))$ for each independent variable.
+
+3. **Regression Coefficients:**
+   - The regression coefficients $(\(\beta_1, \beta_2, \ldots, \beta_n\))$ indicate the change in the dependent variable for a one-unit change in the corresponding independent variable, while holding other variables constant.
+
+4. **Matrix Notation:**
+   - The Multiple Linear Regression model can be expressed in matrix notation as $\( \hat{Y} = X \beta + \epsilon \)$, where $\( \hat{Y} \)$ is the vector of predicted values, $\( X \)$ is the matrix of independent variables, $\( \beta \)$ is the vector of coefficients, and $\( \epsilon \)$ is the vector of errors.
+
+### Steps in Multiple Linear Regression:
+
+1. **Data Collection:**
+   - Collect a dataset with observations on the dependent variable and multiple independent variables.
+
+2. **Model Formulation:**
+   - Formulate the Multiple Linear Regression model with the chosen independent variables.
+
+3. **Parameter Estimation:**
+   - Use methods like the method of least squares to estimate the coefficients $(\(\beta_0, \beta_1, \ldots, \beta_n\))$ that minimize the sum of squared differences between the observed and predicted values.
+
+4. **Model Fitting:**
+   - Fit the model by substituting the estimated coefficients into the regression equation.
+
+5. **Model Evaluation:**
+   - Evaluate the model's performance using metrics like Mean Squared Error, R-squared, etc.
+
+### Example:
+
+Consider a scenario where you want to predict a student's final exam score $(\(\hat{y}\))$ based on the number of hours studied $(\(x_1\))$, the number of previous exams taken ($\(x_2\))$, and the average score on previous exams $(\(x_3\))$. The Multiple Linear Regression model would be:
+
+$$\[ \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \epsilon \]$$
+
+The coefficients $(\(\beta_0, \beta_1, \beta_2, \beta_3\))$ would be estimated from the data to provide the best linear fit to the observed scores.
+
+Multiple Linear Regression is a powerful tool for modeling complex relationships in data involving multiple predictors. It allows for a more nuanced understanding of how different variables contribute to the variability in the dependent variable.
