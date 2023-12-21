@@ -370,3 +370,48 @@ This model allows us to estimate the average credit card balance for females $(\
 - If $\(\beta_1\)$ is not statistically significant, there is no evidence of a significant difference in credit card balance between males and females.
 
 This approach allows for a straightforward investigation of the gender difference in credit card balance while controlling for the reference category (males). The choice between dummy coding and effect coding depends on the specific requirements of the analysis and the interpretation of coefficients.
+
+
+# Three Classes of Methods in Regression Analysis
+
+In the context of statistical modeling and regression analysis, there are three classes of methods aimed at addressing the challenges associated with predictor selection and dimensionality reduction. These methods enhance model interpretability, prevent overfitting, and improve predictive performance.
+
+### 1. Subset Selection
+
+- **Objective:** Identify a subset of predictors from the original set that contributes most to the prediction.
+- **Methods:**
+  - **Forward Selection:** Sequentially add predictors starting with an empty model.
+  - **Backward Elimination:** Sequentially remove predictors starting with the full model.
+  - **Stepwise Selection:** A combination of forward and backward selection.
+- **Considerations:**
+  - Computationally intensive, especially with a large number of predictors.
+  - Exhaustive search may be impractical for high-dimensional data.
+
+### 2. Shrinkage Methods
+
+- **Objective:** Shrink the coefficients of less important predictors toward zero, reducing their impact on the model.
+- **Methods:**
+  - **Ridge Regression (L2 regularization):** Adds a penalty term proportional to the square of the coefficients.
+  - **Lasso Regression (L1 regularization):** Adds a penalty term proportional to the absolute values of the coefficients.
+  - **Elastic Net:** A combination of Ridge and Lasso regularization.
+- **Considerations:**
+  - Effective for dealing with multicollinearity.
+  - Suitable for situations with a large number of predictors.
+
+### 3. Dimension Reduction Methods
+
+- **Objective:** Transform the original set of predictors into a smaller set of uncorrelated variables (principal components) that capture most of the variability in the data.
+- **Methods:**
+  - **Principal Component Analysis (PCA):** Identifies linear combinations of the original predictors (principal components).
+  - **Partial Least Squares (PLS):** Similar to PCA but considers both the response variable and predictors.
+- **Considerations:**
+  - Reduces dimensionality without necessarily discarding variables.
+  - Principal components may not be interpretable in terms of the original predictors.
+
+### Considerations for All Methods
+
+- The choice of method depends on the specific goals of the analysis, the nature of the data, and the interpretability of the resulting model.
+- Cross-validation is often used to assess the performance of different methods and select an appropriate model.
+- These methods help in addressing issues like multicollinearity, overfitting, and the curse of dimensionality.
+
+In practice, a combination of these methods or a careful evaluation based on the characteristics of the dataset is often employed to arrive at an effective and interpretable model.
