@@ -140,3 +140,72 @@ Here:
 - $\( y \)$ is the vector of observed values.
 
 This method ensures that the model is optimized to provide the best linear fit to the given data based on the least squares criterion. The obtained parameter values represent the coefficients of the model that result in the smallest sum of squared differences between the predicted and observed values.
+
+
+
+# Simple Linear Regression
+
+Simple Linear Regression is a statistical method used to model the relationship between a single independent variable (predictor) and a dependent variable. The goal is to find a linear equation that best predicts the dependent variable based on the values of the independent variable. The equation for simple linear regression is often written as:
+
+$$\[ \hat{y} = \beta_0 + \beta_1 x \]$$
+
+Here:
+- $\( \hat{y} \)$ is the predicted value of the dependent variable.
+- $\( x \)$ is the independent variable (predictor).
+- $\( \beta_0 \)$ is the y-intercept (the value of $\( \hat{y} \)$ when $\( x = 0 \)$).
+- $\( \beta_1 \)$ is the slope (the change in $\( \hat{y} \)$ for a one-unit change in $\( x \))$.
+
+### Steps in Simple Linear Regression:
+
+1. **Data Collection:**
+   - Gather a dataset containing pairs of observations $\((x_i, y_i)\)$, where $\(x_i\)$ is the independent variable, and $\(y_i\)$ is the corresponding dependent variable.
+
+2. **Visualization:**
+   - Plot the data points on a scatter plot to visualize the relationship between $\(x\)$ and $\(y\)$.
+
+3. **Model Formulation:**
+   - Formulate the simple linear regression model: $\( \hat{y} = \beta_0 + \beta_1 x \)$.
+
+4. **Parameter Estimation:**
+   - Use statistical methods (such as the method of least squares) to estimate the model parameters \( \beta_0 \) and \( \beta_1 \) that minimize the sum of squared differences between the observed and predicted values.
+
+5. **Model Fitting:**
+   - Fit the model by substituting the estimated parameters into the regression equation.
+
+6. **Prediction:**
+   - Use the fitted model to make predictions for new values of $\(x\)$.
+
+7. **Model Evaluation:**
+   - Assess the goodness of fit using metrics such as Mean Squared Error (MSE), R-squared, or others.
+
+### Example:
+
+Consider the following data:
+
+$$\[ \begin{align*}
+x & : 1, 2, 3, 4, 5 \\
+y & : 2, 4, 5, 4, 5 \\
+\end{align*} \]$$
+
+The simple linear regression model would be $\( \hat{y} = \beta_0 + \beta_1 x \)$. The goal is to find the values of $\( \beta_0 \)$ and $\( \beta_1 \)$ that minimize the sum of squared differences between the observed and predicted values.
+
+### Mathematical Formulation:
+
+The estimated parameters $\( \beta_0 \)$ and $\( \beta_1 \)$ can be calculated using the following formulas:
+
+$$\[ \beta_1 = \frac{n(\sum xy) - (\sum x)(\sum y)}{n(\sum x^2) - (\sum x)^2} \]$$
+
+$$\[ \beta_0 = \frac{\sum y - \beta_1(\sum x)}{n} \]$$
+
+Where:
+- $\( n \)$ is the number of observations.
+- $\( \sum \)$ denotes the sum across all observations.
+- $\( x \)$ and $\( y \)$ are the independent and dependent variables, respectively.
+
+### Interpretation:
+
+- The slope $\( \beta_1 \)$ represents the change in the predicted $\(y\)$ for a one-unit change in $\(x\)$.
+- The y-intercept $\( \beta_0 \)$ is the value of $\(y\)$ when $\(x\)$ is zero.
+
+Simple Linear Regression provides a straightforward way to model and understand the relationship between two variables. It serves as a foundational concept for more complex regression analyses involving multiple predictors (Multiple Linear Regression).
+
