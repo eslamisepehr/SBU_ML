@@ -64,11 +64,11 @@ In contrast to classification problems, where the goal is to predict a categoric
 
 In the context of machine learning, RSS stands for "Residual Sum of Squares." It is a measure used in regression analysis to evaluate the goodness of fit of a regression model. The goal of a regression model is to predict the values of a dependent variable based on the values of independent variables. The RSS helps quantify how well the model's predictions match the actual observed values.
 
-## Residuals
+**Residuals:**
 
 In regression analysis, the residuals represent the differences between the predicted values (output of the regression model) and the actual observed values. These differences are called residuals or errors.
 
-## Residual Sum of Squares (RSS) Formula
+**Residual Sum of Squares (RSS) Formula:**
 
 The RSS is calculated by taking the sum of the squared differences between the predicted values (\( \hat{y}_i \)) and the actual observed values (\( y_i \)) for each data point in the dataset. Mathematically, the formula is expressed as:
 
@@ -79,18 +79,18 @@ Where:
 - $\( y_i \)$ is the actual observed value for the \(i\)-th data point.
 - $\( \hat{y}_i \)$ is the predicted value for the \(i\)-th data point.
 
-## Interpretation
+**Interpretation:**
 
 The RSS provides a measure of the overall fit of the regression model. A lower RSS indicates a better fit, as it implies that the model's predictions are closer to the actual observed values. The goal of regression analysis is often to find the model parameters that minimize the RSS, leading to the best-fitting model.
 
-## Optimization
+**Optimization:**
 
 In practice, the optimization process involves adjusting the model parameters to minimize the RSS. This process is commonly done using techniques like the method of least squares. The parameters that minimize the RSS are often referred to as the "least squares estimates."
 
-## Example
+**Example:**
 
 Consider a simple linear regression model with one independent variable $(\( x \))$ and one dependent variable $(\( y \))$. The model can be represented as $\( \hat{y} = \beta_0 + \beta_1 x \)$, where $\( \beta_0 \)$ and $\( \beta_1 \)$ are the model parameters. The RSS for this model would be calculated by summing the squared differences between the predicted values and the actual observed values for each data point.
 
-## Use in Model Evaluation
+**Use in Model Evaluation:**
 
 While RSS is used during model development and parameter estimation, it is important to use additional metrics (such as Mean Squared Error, R-squared, etc.) for model evaluation on unseen data to avoid overfitting and to assess the model's generalization performance.
