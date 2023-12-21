@@ -263,3 +263,63 @@ $$\[ \hat{y} = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \epsilon \]$$
 The coefficients $(\(\beta_0, \beta_1, \beta_2, \beta_3\))$ would be estimated from the data to provide the best linear fit to the observed scores.
 
 Multiple Linear Regression is a powerful tool for modeling complex relationships in data involving multiple predictors. It allows for a more nuanced understanding of how different variables contribute to the variability in the dependent variable.
+
+
+
+# Null Hypothesis, T-Statistic, and P-Value
+
+### Null Hypothesis $(\(H_0\))$
+
+The null hypothesis $(\(H_0\))$ is a statement that there is no significant difference or effect. It represents the default assumption or status quo. In a t-test, the null hypothesis often involves the idea that there is no difference between the groups being compared.
+
+**Example:** For a one-sample t-test comparing the mean $(\(\mu\))$ of a sample to a known value, the null hypothesis could be $\(H_0: \mu = \mu_0\)$, where $\(\mu_0\)$ is the specified value.
+
+### T-Statistic
+
+The t-statistic is a standardized measure that quantifies how far the sample estimate is from the null hypothesis value in terms of the standard error. For a one-sample t-test, the formula for the t-statistic is:
+
+$$\[ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} \]$$
+
+Where:
+- $\(\bar{x}\)$ is the sample mean.
+- $\(\mu_0\)$ is the null hypothesis mean.
+- $\(s\)$ is the sample standard deviation.
+- $\(n\)$ is the sample size.
+
+### P-Value
+
+The p-value is the probability of observing a t-statistic as extreme as, or more extreme than, the one calculated from the sample data, assuming that the null hypothesis is true. In other words, it provides a measure of the evidence against the null hypothesis.
+
+- A small p-value (typically less than a chosen significance level, e.g., 0.05) suggests that there is enough evidence to reject the null hypothesis.
+- A large p-value suggests that there is not enough evidence to reject the null hypothesis.
+
+### Hypothesis Testing Process
+
+1. **Formulate Hypotheses:**
+   - Null Hypothesis $(\(H_0\))$: Typically involves equality (e.g., $\(H_0: \mu = \mu_0\$)).
+   - Alternative Hypothesis $(\(H_1\))$: States what we are testing for (e.g., $\(H_1: \mu \neq \mu_0\$)).
+
+2. **Choose Significance Level $(\(\alpha\))$:**
+   - Common choices are 0.05, 0.01, etc.
+
+3. **Calculate Test Statistic:**
+   - Use the formula for the t-statistic.
+
+4. **Determine P-Value:**
+   - Find the probability of obtaining a t-statistic as extreme as the one observed, assuming the null hypothesis is true.
+
+5. **Make a Decision:**
+   - If the p-value is less than $\(\alpha\)$, reject the null hypothesis.
+   - If the p-value is greater than or equal to $\(\alpha\)$, fail to reject the null hypothesis.
+
+### Example
+
+For a one-sample t-test comparing the mean $(\(\bar{x}\))$ of a sample to a known value $(\(\mu_0\))$, the hypotheses would be:
+
+$$\[ H_0: \bar{x} = \mu_0 \]$$
+$$\[ H_1: \bar{x} \neq \mu_0 \]$$
+
+The t-statistic is calculated using the formula mentioned earlier. The p-value is then determined, and a decision is made based on the chosen significance level.
+
+In summary, the null hypothesis represents the status quo, the t-statistic quantifies the difference between the sample and null hypothesis, and the p-value provides a measure of the evidence against the null hypothesis in hypothesis testing.
+
