@@ -39,3 +39,42 @@ A computer program is said to learn from experience E with respect to some task 
 - **Active Learning:**
   - Involves selecting and labeling the most informative data points for model training.
   - The model queries the user or other information sources to improve its performance.
+
+
+### Classifier Evaluation Metrics:
+
+1. **Accuracy:**
+   - **Definition:** Accuracy measures the overall correctness of the model by calculating the ratio of correctly predicted instances to the total instances.
+   - **Formula:**
+     $$\[
+     \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
+     \]$$
+
+2. **Error Rate:**
+   - **Definition:** The Error Rate is the complement of accuracy and represents the proportion of incorrectly predicted instances.
+   - **Formula:**
+     $$\[
+     \text{Error Rate} = \frac{\text{Number of Incorrect Predictions}}{\text{Total Number of Predictions}}
+     \]$$
+
+3. **Sensitivity (True Positive Rate or Recall):**
+   - **Definition:** Sensitivity measures the ability of the model to correctly identify positive instances (true positives) out of the total actual positive instances.
+   - **Formula:**
+     $$\[
+     \text{Sensitivity} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}
+     \]$$
+
+4. **Specificity (True Negative Rate):**
+   - **Definition:** Specificity measures the ability of the model to correctly identify negative instances (true negatives) out of the total actual negative instances.
+   - **Formula:**
+     $$\[
+     \text{Specificity} = \frac{\text{True Negatives}}{\text{True Negatives + False Positives}}
+     \]$$
+
+**Note:** Terms in the formulas:
+- **True Positives (TP):** The number of instances correctly predicted as positive.
+- **True Negatives (TN):** The number of instances correctly predicted as negative.
+- **False Positives (FP):** The number of instances incorrectly predicted as positive.
+- **False Negatives (FN):** The number of instances incorrectly predicted as negative.
+
+These metrics provide a comprehensive view of a classifier's performance, addressing aspects of correctness, error, and the ability to correctly identify positive and negative instances. It's important to consider the specific characteristics of the problem and the desired outcomes when choosing which metrics to prioritize.
