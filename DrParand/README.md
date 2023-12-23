@@ -209,3 +209,37 @@ This entropy calculation guides decision tree algorithms in choosing the attribu
 
 # Deep Learning:
 Deep Learning is a subset of machine learning that involves the use of artificial neural networks to model and solve complex problems. It is characterized by the depth of these neural networks, comprising multiple layers (deep architectures). Deep learning algorithms learn hierarchical representations of data, automatically extracting features at different levels, enabling them to excel in tasks such as image and speech recognition, natural language processing, and more. Deep learning has gained prominence due to its ability to automatically learn and adapt to intricate patterns and representations in large datasets, making it particularly powerful for tasks with high-dimensional and unstructured data.
+
+# High-Level View of Neural Networks (NN):
+
+Neural networks are a class of machine learning models inspired by the structure and functioning of the human brain. They consist of interconnected nodes, called neurons, organized into layers. Neural networks can be used for a variety of tasks, including classification, regression, pattern recognition, and more.
+
+**Components of Neural Networks:**
+
+1. **Input Layer:**
+   - Neurons in this layer receive the input data.
+
+2. **Hidden Layers:**
+   - Layers between the input and output layers.
+   - Neurons in these layers process and transform the input data.
+
+3. **Output Layer:**
+   - Produces the final output or prediction.
+
+4. **Weights and Biases:**
+   - Parameters that the network learns during training to make accurate predictions.
+   - Weights determine the strength of connections between neurons.
+   - Biases allow neurons to activate even when input is 0.
+
+5. **Activation Function:**
+   - Introduces non-linearity to the model.
+   - Common activation functions include ReLU (Rectified Linear Unit) and Sigmoid.
+
+6. **Loss Function:**
+   - Measures the difference between predicted and actual outputs.
+   - The goal during training is to minimize this loss.
+
+7. **Optimization Algorithm:**
+   - Adjusts weights and biases to minimize the loss function.
+   - Examples include Stochastic Gradient Descent (SGD) and Adam.
+
