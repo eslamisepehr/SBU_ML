@@ -108,3 +108,71 @@ These metrics and methods provide insights into different aspects of classifier 
 K-fold cross-validation is a method used to assess a machine learning model's performance. The dataset is divided into k subsets, and the model is trained and evaluated k times. In each iteration, one subset serves as the test set, while the remaining subsets are used for training. This process provides a more robust performance estimate, helping to account for dataset variability and reduce the risk of overfitting or underfitting. Common choices for k are 5 or 10.
 
 # Support Vector Machine
+
+# Decision Tree:
+
+### Definition:
+A **Decision Tree** is a supervised machine learning algorithm used for classification and regression. It recursively partitions data into subsets based on attributes, forming a tree-like structure.
+
+### Method:
+- **Divide and Conquer:**
+  - Divides the dataset into subsets based on attribute values.
+  - Recursively applies the process, creating a tree structure.
+  - Decision-making involves traversing from root to leaf.
+
+### Material of the Tree:
+- **Root:**
+  - Represents the initial dataset and the first splitting attribute.
+- **Branch:**
+  - Represents a decision or a test on an attribute.
+- **Intermediate Node:**
+  - Represents a data subset and a decision point for further splits.
+- **Leaf:**
+  - Represents the final outcome or decision.
+
+### Application in Industry:
+- **Customer Relationship Management:**
+  - Predicting customer churn.
+- **Credit Scoring:**
+  - Evaluating credit risk.
+- **Medical Diagnosis:**
+  - Assisting in medical decision-making.
+- **Fraud Detection:**
+  - Identifying patterns in financial transactions.
+
+### ID3 (Iterative Dichotomiser 3):
+
+#### Definition:
+- **ID3** is a top-down, recursive, and greedy decision tree algorithm designed for classification tasks.
+
+#### Method:
+- **Top Down:**
+  - Begins with the entire dataset, recursively selects the best attribute.
+- **Greedy:**
+  - Chooses the attribute maximizing information gain.
+- **Recursive:**
+  - Repeats for each subset until a stopping criterion.
+
+### C4.5:
+
+#### Definition:
+- **C4.5** is a top-down, recursive, and greedy decision tree algorithm handling both categorical and numerical data.
+
+#### Method:
+- **Top Down and Recursive:**
+  - Employs a top-down and recursive approach for tree construction.
+- **Greedy:**
+  - Uses a greedy strategy based on information gain or gain ratio.
+
+### CART (Classification and Regression Trees):
+
+#### Definition:
+- **CART** is a decision tree algorithm supporting classification and regression, using binary splits and Gini impurity for classification.
+
+#### Method:
+- **Top Down and Recursive:**
+  - Similar to ID3 and C4.5, using a top-down and recursive approach.
+- **Greedy:**
+  - Employs a greedy strategy to find the best binary split based on Gini impurity.
+
+These decision tree algorithms are fundamental in machine learning, providing transparent and interpretable models for various applications in different industries.
