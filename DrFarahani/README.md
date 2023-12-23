@@ -70,7 +70,7 @@ In regression analysis, the residuals represent the differences between the pred
 
 ### Residual Sum of Squares (RSS) Formula:
 
-The RSS is calculated by taking the sum of the squared differences between the predicted values (\( \hat{y}_i \)) and the actual observed values (\( y_i \)) for each data point in the dataset. Mathematically, the formula is expressed as:
+The RSS is calculated by taking the sum of the squared differences between the predicted values $(\( \hat{y}_i \))$ and the actual observed values $(\( y_i \))$ for each data point in the dataset. Mathematically, the formula is expressed as:
 
 $$\text{RSS}=\sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
 
