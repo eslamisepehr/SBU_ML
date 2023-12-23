@@ -206,3 +206,6 @@ Let's consider a dataset with 100 emails, where 40 are spam (positive) and 60 ar
 
 This entropy calculation guides decision tree algorithms in choosing the attribute that minimizes entropy, contributing to the effectiveness of the tree in making informed splits.
 
+
+# Deep Learning:
+Deep Learning is a subset of machine learning that involves the use of artificial neural networks to model and solve complex problems. It is characterized by the depth of these neural networks, comprising multiple layers (deep architectures). Deep learning algorithms learn hierarchical representations of data, automatically extracting features at different levels, enabling them to excel in tasks such as image and speech recognition, natural language processing, and more. Deep learning has gained prominence due to its ability to automatically learn and adapt to intricate patterns and representations in large datasets, making it particularly powerful for tasks with high-dimensional and unstructured data.
