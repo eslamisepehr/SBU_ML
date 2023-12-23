@@ -106,3 +106,5 @@ These metrics and methods provide insights into different aspects of classifier 
 
 # K-fold Cross-Validation:
 K-fold cross-validation is a method used to assess a machine learning model's performance. The dataset is divided into k subsets, and the model is trained and evaluated k times. In each iteration, one subset serves as the test set, while the remaining subsets are used for training. This process provides a more robust performance estimate, helping to account for dataset variability and reduce the risk of overfitting or underfitting. Common choices for k are 5 or 10.
+
+# Support Vector Machine
