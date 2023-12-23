@@ -103,3 +103,6 @@ A computer program is said to learn from experience E with respect to some task 
    - **Formulae:** Not applicable (this is a method, not a metric).
 
 These metrics and methods provide insights into different aspects of classifier performance and are crucial for assessing the quality of a machine learning model. The choice of metrics and validation methods depends on the characteristics of the dataset and the goals of the modeling task.
+
+# K-fold Cross-Validation:
+K-fold cross-validation is a method used to assess a machine learning model's performance. The dataset is divided into k subsets, and the model is trained and evaluated k times. In each iteration, one subset serves as the test set, while the remaining subsets are used for training. This process provides a more robust performance estimate, helping to account for dataset variability and reduce the risk of overfitting or underfitting. Common choices for k are 5 or 10.
