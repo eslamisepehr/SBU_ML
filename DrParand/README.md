@@ -243,3 +243,50 @@ Neural networks are a class of machine learning models inspired by the structure
    - Adjusts weights and biases to minimize the loss function.
    - Examples include Stochastic Gradient Descent (SGD) and Adam.
 
+### Feedforward:
+
+**Definition:**
+- **Feedforward** refers to the flow of data through a neural network from the input layer to the output layer without any feedback connections or loops.
+  
+### Activation Function:
+
+**Definition:**
+- **Activation Function** introduces non-linearity to the output of a neuron in a neural network. It allows the network to learn complex patterns and relationships.
+  
+**Example Activation Functions:**
+- **ReLU (Rectified Linear Unit):** $\(f(x) = \max(0, x)\)$
+- **Sigmoid:** $\(f(x) = \frac{1}{1 + e^{-x}}\)$
+- **TanH (Hyperbolic Tangent):** $\(f(x) = \frac{e^{2x} - 1}{e^{2x} + 1}\)$
+
+### Loss Function:
+
+**Definition:**
+- **Loss Function** measures the difference between the predicted output and the true target values. It quantifies how well the model is performing.
+  
+**Examples of Loss Functions:**
+- **Mean Squared Error (MSE):** $$\(L(y, \hat{y}) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\)$$
+- **Cross-Entropy Loss (Log Loss):** $$\(L(y, \hat{y}) = -\sum_{i=1}^{n} y_i \log(\hat{y}_i)\)$$ (for classification tasks)
+
+### Back Propagation:
+
+**Definition:**
+- **Back Propagation** is an optimization algorithm used to train neural networks. It involves computing gradients of the loss function with respect to the model's parameters and updating the parameters in the opposite direction of the gradient to minimize the loss.
+
+### Feed:
+
+**Definition:**
+- In the context of neural networks, **Feed** is a part of the training process where input data is fed into the network for forward propagation, resulting in predictions or output.
+
+### Stochastic Gradient Descent (SGD):
+
+**Definition:**
+- **Stochastic Gradient Descent (SGD)** is an optimization algorithm used to minimize the loss function during training. It updates the model's parameters by taking small steps in the direction of the negative gradient, making it suitable for large datasets.
+
+**Steps in SGD:**
+1. **Randomly Sample Batch:** Select a small random batch of data.
+2. **Forward Propagation:** Compute predictions using the current model.
+3. **Compute Loss:** Calculate the loss between predictions and true values.
+4. **Backward Propagation:** Compute gradients of the loss with respect to parameters.
+5. **Update Parameters:** Adjust model parameters in the opposite direction of the gradient.
+
+In summary, these terms are fundamental concepts in the training and operation of neural networks, contributing to their ability to learn and make predictions on various tasks.
