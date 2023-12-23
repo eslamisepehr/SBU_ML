@@ -176,3 +176,33 @@ A **Decision Tree** is a supervised machine learning algorithm used for classifi
   - Employs a greedy strategy to find the best binary split based on Gini impurity.
 
 These decision tree algorithms are fundamental in machine learning, providing transparent and interpretable models for various applications in different industries.
+
+
+# Entropy in Decision Trees:
+
+**Entropy** is a measure of uncertainty or disorder in a dataset. In the context of binary classification, the entropy of a set $\( S \)$ is calculated using the formula:
+
+$$\[ \text{Entropy}(S) = - p \cdot \log_2(p) - (1 - p) \cdot \log_2(1 - p) \]$$
+
+where:
+- $\( p \)$ is the proportion of positive instances in the set \( S \).
+- $\( (1 - p) \)$ is the proportion of negative instances in the set \( S \).
+- $\( \log_2 \)$ is the logarithm base 2.
+
+### Real Example:
+
+Let's consider a dataset with 100 emails, where 40 are spam (positive) and 60 are not spam (negative).
+
+1. **Calculate the Proportions:**
+   - $\( p \)$ (proportion of spam) = 40/100 = 0.4
+   - $\( 1 - p \)$ (proportion of not spam) = 1 - 0.4 = 0.6
+
+2. **Calculate Entropy:**
+   $$\[ \text{Entropy}(S) = - (0.4 \cdot \log_2(0.4)) - (0.6 \cdot \log_2(0.6)) \]$$
+
+3. **Interpretation:**
+   - If the resulting entropy is close to 0, the dataset is pure, indicating low uncertainty.
+   - If the entropy is close to 1, the dataset is evenly split, indicating high uncertainty.
+
+This entropy calculation guides decision tree algorithms in choosing the attribute that minimizes entropy, contributing to the effectiveness of the tree in making informed splits.
+
