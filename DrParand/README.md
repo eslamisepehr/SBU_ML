@@ -18,3 +18,24 @@
 
 # Note:
 A computer program is said to learn from experience E with respect to some task T and some performance measure P. If its performance on T, as measured by P, improves with experience E.
+
+# Machine Learning Approaches:
+- **Supervised Learning:**
+  - Training the model on a labeled dataset.
+  - Input-output pairs are provided for the algorithm to learn the mapping function.
+
+- **Unsupervised Learning:**
+  - Learning patterns and relationships in unlabeled data.
+  - Clustering and dimensionality reduction are common tasks.
+
+- **Semi-Supervised Learning:**
+  - Utilizing both labeled and unlabeled data for training.
+  - Beneficial when labeled data is scarce.
+  
+- **Reinforcement Learning:**
+  - Training a model to make sequences of decisions by interacting with an environment.
+  - Rewards and penalties guide the learning process.
+
+- **Active Learning:**
+  - Involves selecting and labeling the most informative data points for model training.
+  - The model queries the user or other information sources to improve its performance.
