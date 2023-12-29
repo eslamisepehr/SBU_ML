@@ -328,3 +328,36 @@ $$\[ \text{activation}(z) = \begin{cases} 1, & \text{if } z \geq 0 \\ 0, & \text
 In practice, other activation functions like sigmoid, hyperbolic tangent, or rectified linear unit (ReLU) are often used.
 
 The perceptron model is foundational to the development of artificial neural networks and deep learning architectures.
+
+
+## Hyperplane in a Perceptron
+
+In the context of a perceptron and binary classification, a hyperplane is a key concept that defines the decision boundary used to separate instances of different classes. A hyperplane is a flat affine subspace of one dimension less than the ambient space it divides. For a perceptron, which is a linear classifier, the hyperplane represents the boundary between instances of one class and instances of the other class.
+
+### Hyperplane in a Perceptron:
+
+In a perceptron, the hyperplane is defined by the weights $(\(w_1, w_2, \ldots, w_n\))$ and the bias $(\(b\))$. The decision rule is based on whether a data point lies above or below this hyperplane.
+
+For a perceptron with two features (\(x_1, x_2\)), the hyperplane equation is given by:
+
+$$\[ w_1 \cdot x_1 + w_2 \cdot x_2 + b = 0 \]$$
+
+This equation represents a line in a two-dimensional space, and it is a hyperplane because it separates the space into two regions. If a data point $\((x_1, x_2)\)$ lies on one side of the hyperplane, it is classified as belonging to one class; if it lies on the other side, it is classified as belonging to the other class.
+
+### Decision Rule:
+
+The decision rule for a perceptron with a hyperplane is determined by the sign of the expression $\(w_1 \cdot x_1 + w_2 \cdot x_2 + b\)$. If the expression is positive, the point is on one side of the hyperplane and classified as one class; if negative, it is on the other side and classified as the other class.
+
+### Learning the Hyperplane:
+
+During the training phase, the perceptron adjusts its weights and bias to learn the optimal hyperplane that minimizes classification errors. This is typically achieved through an iterative process using a learning algorithm such as the perceptron learning algorithm or stochastic gradient descent.
+
+### Extension to Higher Dimensions:
+
+In higher dimensions with more features, the hyperplane is defined by the general equation:
+
+$$\[ w_1 \cdot x_1 + w_2 \cdot x_2 + \ldots + w_n \cdot x_n + b = 0 \]$$
+
+The decision boundary is still a hyperplane, but it's now a subspace in an $\(n\)$-dimensional space that separates instances of different classes.
+
+Understanding the hyperplane in a perceptron is crucial for grasping how linear classifiers make decisions based on the relationships between features. It's important to note that while a single perceptron is limited to learning linearly separable functions, more complex functions can be learned by stacking multiple perceptrons or using more sophisticated architectures like multi-layer perceptrons (neural networks).
