@@ -631,3 +631,31 @@ The denominator in the equation ensures that the probabilities sum to 1 across a
 
 In practice, various optimization algorithms can be used to find the optimal values for the model parameters. The `LogisticRegression` class in scikit-learn (Python library) supports multinomial logistic regression through the `multi_class` parameter.
 
+
+## Discriminant Analysis
+
+Discriminant Analysis (DA) is a statistical technique used in machine learning and statistics for classification and dimensionality reduction. The primary goal of discriminant analysis is to determine which variables discriminate between two or more naturally occurring groups.
+
+### Types of Discriminant Analysis
+
+1. **Linear Discriminant Analysis (LDA):**
+   - LDA is the most common form of discriminant analysis.
+   - Assumes that the data for each group are normally distributed and have the same covariance matrix.
+   - Finds a linear combination of features to maximize the distance between the means of different classes while minimizing the spread or variance within each class.
+
+2. **Quadratic Discriminant Analysis (QDA):**
+   - Similar to LDA but relaxes the assumption that the covariance matrix is the same for all classes.
+   - Allows each class to have its own covariance matrix, making it more flexible but potentially requiring more parameters to estimate.
+
+### Steps in Discriminant Analysis
+
+1. **Compute Means and Covariance Matrices:**
+   - Calculate the means and covariance matrices for each group or class in the data.
+
+2. **Compute Discriminant Functions:**
+   - Derive discriminant functions based on the means and covariance matrices to distinguish between different groups.
+
+3. **Assign Observations to Classes:**
+   - Use the discriminant functions to classify new observations into one of the predefined classes.
+
+Discriminant analysis is commonly used in various fields, including biology, finance, marketing, and medical research, for tasks such as predicting group membership or identifying features that contribute to group differences. It's important to note that discriminant analysis assumes certain characteristics of the data distribution, and its effectiveness depends on the validity of these assumptions.
