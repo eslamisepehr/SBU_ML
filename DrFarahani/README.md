@@ -659,3 +659,30 @@ Discriminant Analysis (DA) is a statistical technique used in machine learning a
    - Use the discriminant functions to classify new observations into one of the predefined classes.
 
 Discriminant analysis is commonly used in various fields, including biology, finance, marketing, and medical research, for tasks such as predicting group membership or identifying features that contribute to group differences. It's important to note that discriminant analysis assumes certain characteristics of the data distribution, and its effectiveness depends on the validity of these assumptions.
+
+
+
+## Joint and Marginal Distributions
+
+### Joint Distribution:
+
+For two random variables $\(X\)$ and $\(Y\)$, the joint distribution is denoted as $\(P(X = x, Y = y)\)$ for discrete variables or $\(f_{X,Y}(x, y)\)$ for continuous variables.
+
+### Marginal Distribution:
+
+#### Discrete Variables:
+- The marginal distribution of $\(X\)$ is obtained by summing over all possible values of $\(Y\)$:
+  $$\[ P(X = x) = \sum_y P(X = x, Y = y) \]$$
+
+- The marginal distribution of $\(Y\)$ is obtained by summing over all possible values of $\(X\)$:
+  $$\[ P(Y = y) = \sum_x P(X = x, Y = y) \]$$
+
+#### Continuous Variables:
+- The marginal distribution of \(X\) is obtained by integrating over all possible values of $\(Y\)$:
+  $$\[ f_X(x) = \int f_{X,Y}(x, y) \, dy \]$$
+
+- The marginal distribution of \(Y\) is obtained by integrating over all possible values of $\(X\)$:
+  $$\[ f_Y(y) = \int f_{X,Y}(x, y) \, dx \]$$
+
+These formulas express how to calculate the probabilities or probability density functions for individual variables from their joint distribution.
+
