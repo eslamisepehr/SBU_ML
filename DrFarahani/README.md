@@ -728,3 +728,20 @@ The normalization constant ensures that the probabilities sum to 1 and is calcul
 $$\[ P(X) = \sum_{C} P(X | C) \cdot P(C) \]$$
 
 Bayes' Theorem provides a principled way to update our beliefs about class probabilities based on observed evidence. The density and prior terms play crucial roles in this process.
+
+
+## Discriminant Function
+
+| Term                     | Explanation                                                                                              |
+|--------------------------|----------------------------------------------------------------------------------------------------------|
+| **Discriminant Function** | A function that combines the observed features in a way that maximizes the difference between classes.   |
+| **Linear Discriminant Analysis (LDA)** | A specific method for creating discriminant functions, assuming normality and equal covariance matrices. |
+| **Quadratic Discriminant Analysis (QDA)** | Another method similar to LDA but relaxes the assumption of equal covariance matrices for each class. |
+| **Purpose**               | Discriminant functions are used for classification, assigning observations to different predefined classes. |
+| **Mathematical Form**     | For LDA, the discriminant function is often a linear combination of the features: $\( D(\mathbf{X}) = \mathbf{w}^T \mathbf{X} + w_0 \)$, where $\(\mathbf{w}\)$ is a weight vector, $\(\mathbf{X}\)$ is the feature vector, and $\(w_0\)$ is a bias term. |
+| **Calculation**           | - Compute class means and covariance matrices. <br> - Calculate the inverse of the pooled covariance matrix. <br> - Compute the weight vector $\(\mathbf{w}\)$ and bias term $\(w_0\)$. <br> - The decision boundary is determined by evaluating the discriminant function. |
+| **Decision Rule**        | For a given observation $\(\mathbf{X}\)$, if $\(D(\mathbf{X}) > c\)$, classify it into class 1; otherwise, classify it into class 0. $\(c\)$ is a threshold determined based on class priors. |
+| **Applications**          | Widely used in fields like biology, finance, marketing, and medical research for classification tasks.     |
+| **Assumptions**           | Assumes that the data within each class is normally distributed and has the same covariance matrix. In QDA, the covariance matrices are allowed to be different. |
+| **Advantages**            | - Effective for separating classes. <br> - Provides insight into which features contribute most to class separation. |
+| **Limitations**           | - Assumes normality and equal covariance matrices. <br> - Sensitive to outliers. <br> - May not perform well if assumptions are violated. |
