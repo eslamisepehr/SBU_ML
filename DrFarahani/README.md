@@ -686,3 +686,45 @@ For two random variables $\(X\)$ and $\(Y\)$, the joint distribution is denoted 
 
 These formulas express how to calculate the probabilities or probability density functions for individual variables from their joint distribution.
 
+
+## Bayes' Theorem for Classification
+
+In the context of classification, Bayes' Theorem is expressed as follows:
+
+$$\[ P(C | X) = \frac{P(X | C) \cdot P(C)}{P(X)} \]$$
+
+Here's a breakdown of the terms in the formula:
+
+- **Posterior Probability $(\( P(C | X) \))$:** The probability of the class given the observed features.
+
+- **Likelihood $(\( P(X | C) \))$:** The probability of observing the features given the class.
+
+- **Prior Probability $(\( P(C) \))$:** The initial belief or probability assigned to a specific class.
+
+- **Normalization Constant $(\( P(X) \))$:** The probability of observing the features.
+
+The class with the highest posterior probability, given the observed features, is typically chosen as the predicted class:
+
+$$\[ \text{predicted class} = \arg \max_{C} P(C | X) \]$$
+
+### Likelihood (Density) and Prior Probability:
+
+- **Density (Likelihood):**
+  $$\[ P(X | C) \]$$
+  The probability of observing the features given a specific class. It quantifies how well the features align with the characteristics of the class.
+
+- **Prior Probability:**
+  $$\[ P(C) \]$$
+  The initial belief or probability assigned to a specific class before observing any features. It reflects our knowledge about the distribution of classes.
+
+### Posterior Probability Calculation:
+
+The posterior probability is calculated by combining the likelihood, prior, and a normalization constant:
+
+$$\[ P(C | X) = \frac{P(X | C) \cdot P(C)}{P(X)} \]$$
+
+The normalization constant ensures that the probabilities sum to 1 and is calculated as:
+
+$$\[ P(X) = \sum_{C} P(X | C) \cdot P(C) \]$$
+
+Bayes' Theorem provides a principled way to update our beliefs about class probabilities based on observed evidence. The density and prior terms play crucial roles in this process.
