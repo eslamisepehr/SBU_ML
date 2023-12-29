@@ -290,3 +290,41 @@ Neural networks are a class of machine learning models inspired by the structure
 5. **Update Parameters:** Adjust model parameters in the opposite direction of the gradient.
 
 In summary, these terms are fundamental concepts in the training and operation of neural networks, contributing to their ability to learn and make predictions on various tasks.
+
+
+## Perceptron in Deep Learning
+
+The perceptron is a fundamental building block of neural networks and serves as a simple model for a biological neuron. In deep learning, perceptrons are typically used as the basic unit in the design of artificial neural networks.
+
+### Mathematical Representation:
+
+The output (y) of a perceptron is calculated as follows:
+
+$$\[ y = \text{activation}\left(\sum_{i=1}^{n} (x_i \cdot w_i) + b\right) \]$$
+
+Where:
+- $\(x_i\)$ is the $\(i\)$-th input,
+- $\(w_i\)$ is the weight associated with the \(i\)-th input,
+- $\(b\)$ is the bias term,
+- $\(\sum_{i=1}^{n} (x_i \cdot w_i) + b\)$ is the weighted sum of inputs plus bias,
+- $\(\text{activation}(\cdot)\)$ is an activation function (commonly a step function, sigmoid, or hyperbolic tangent).
+
+The bias term \(b\) allows the perceptron to produce an output even when all inputs are zero. It essentially acts as a threshold for activation.
+
+### Training the Perceptron:
+
+The weights $(\(w_1, w_2, \ldots, w_n\))$ and the bias $(\(b\))$ are adjusted during the training process to learn from the input data. The perceptron is trained using a learning algorithm, such as the perceptron learning algorithm or stochastic gradient descent, to minimize the error in its predictions.
+
+### Limitations of a Single Perceptron:
+
+A single perceptron has limitations and can only learn linearly separable functions. However, by combining multiple perceptrons in layers and using non-linear activation functions, more complex functions can be learned, forming the basis of neural networks.
+
+### Example of a Step Activation Function:
+
+A common choice for the activation function is a step function, which outputs 1 if the weighted sum plus bias is greater than or equal to zero, and 0 otherwise:
+
+$$\[ \text{activation}(z) = \begin{cases} 1, & \text{if } z \geq 0 \\ 0, & \text{if } z < 0 \end{cases} \]$$
+
+In practice, other activation functions like sigmoid, hyperbolic tangent, or rectified linear unit (ReLU) are often used.
+
+The perceptron model is foundational to the development of artificial neural networks and deep learning architectures.
