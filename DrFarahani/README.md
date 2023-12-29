@@ -745,3 +745,23 @@ Bayes' Theorem provides a principled way to update our beliefs about class proba
 | **Assumptions**           | Assumes that the data within each class is normally distributed and has the same covariance matrix. In QDA, the covariance matrices are allowed to be different. |
 | **Advantages**            | - Effective for separating classes. <br> - Provides insight into which features contribute most to class separation. |
 | **Limitations**           | - Assumes normality and equal covariance matrices. <br> - Sensitive to outliers. <br> - May not perform well if assumptions are violated. |
+
+
+## Logistic Regression vs Linear Discriminant Analysis (LDA)
+
+| **Aspect**                  | **Logistic Regression**                                     | **Linear Discriminant Analysis (LDA)**                           |
+|-----------------------------|------------------------------------------------------------|------------------------------------------------------------------|
+| **Type of Technique**        | Discriminative model - focuses on the decision boundary.     | Generative model - models the distribution of each class.        |
+| **Decision Boundary**        | Non-linear (flexible) decision boundary.                     | Linear decision boundary.                                        |
+| **Assumptions**              | Fewer assumptions about the distribution of the data.        | Assumes normality of features and equal covariance matrices.     |
+| **Output**                  | Probability of belonging to a class (0 or 1 in binary).     | Scores representing the distance to class centroids.            |
+| **Optimization**            | Maximum Likelihood Estimation (MLE) or Regularization.      | Assumes normality and uses MLE to estimate parameters.           |
+| **Handling Outliers**        | Sensitive to outliers.                                      | Less sensitive due to the use of class means and covariances.   |
+| **Application**             | Commonly used in various fields due to simplicity.           | Commonly used when assumptions are met and classes are well-separated. |
+| **Number of Classes**        | Suitable for binary and multiclass classification.           | Suitable for binary and multiclass classification.             |
+| **Dimensionality Reduction** | Not designed for dimensionality reduction.                   | Can be used for dimensionality reduction.                      |
+| **Interpretability**         | Coefficients provide insights into feature importance.       | The direction and magnitude of coefficients provide insights.   |
+| **Scalability**              | Scales well with a large number of features.                 | Can suffer from overfitting when the number of features is large.|
+| **Data Distribution**        | Less sensitive to the distribution of the data.              | Assumes normality, performs well when assumptions are met.     |
+| **Use Cases**               | Commonly used in machine learning and statistics.            | Commonly used in statistics and pattern recognition.            |
+
