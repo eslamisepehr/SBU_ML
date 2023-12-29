@@ -361,3 +361,70 @@ $$\[ w_1 \cdot x_1 + w_2 \cdot x_2 + \ldots + w_n \cdot x_n + b = 0 \]$$
 The decision boundary is still a hyperplane, but it's now a subspace in an $\(n\)$-dimensional space that separates instances of different classes.
 
 Understanding the hyperplane in a perceptron is crucial for grasping how linear classifiers make decisions based on the relationships between features. It's important to note that while a single perceptron is limited to learning linearly separable functions, more complex functions can be learned by stacking multiple perceptrons or using more sophisticated architectures like multi-layer perceptrons (neural networks).
+
+
+## Backpropagation in Neural Networks
+
+**Backpropagation**, short for "backward propagation of errors," is a supervised learning algorithm used for training artificial neural networks. It's a crucial part of the training process that allows neural networks to learn from their mistakes and improve their performance on a task. Backpropagation is a form of supervised learning, where the network is provided with labeled training data, and it adjusts its weights and biases to minimize the difference between the predicted and actual outputs.
+
+### 1. Feedforward Pass:
+- **Input Layer:** The algorithm begins with the input layer, where the network receives the input data.
+- **Hidden Layers:** The input is passed through one or more hidden layers, and the weighted sum of inputs is calculated at each neuron.
+- **Activation Function:** The weighted sum is then passed through an activation function (e.g., sigmoid, hyperbolic tangent, or ReLU) to introduce non-linearity.
+
+### 2. Compute Error:
+- The output from the last layer is compared to the actual target values.
+- The error, often measured using a loss or cost function (e.g., mean squared error or cross-entropy), is computed.
+
+### 3. Backward Pass:
+The goal of backpropagation is to minimize the error by adjusting the weights and biases in the network.
+
+#### 3.1. Compute Gradients:
+- The gradient of the loss with respect to each weight and bias is computed using the chain rule of calculus.
+- The gradient indicates the direction and magnitude of the change needed to reduce the error.
+
+#### 3.2. Update Weights and Biases:
+- The weights and biases are updated in the opposite direction of the gradient to minimize the error.
+- The learning rate controls the size of the update step. It's a hyperparameter that needs to be tuned.
+
+### 4. Iterative Training:
+- Steps 1-3 are repeated for each input in the training dataset.
+- The entire process (feedforward and backward passes) is repeated for multiple epochs until the network converges to a satisfactory state.
+
+### Key Components:
+
+#### Forward Pass:
+$\[ a_i^{(l)} = \sigma\left(\sum_{j} w_{ij}^{(l)} \cdot a_j^{(l-1)} + b_i^{(l)}\right) \]$
+
+Where:
+- $\( a_i^{(l)} \)$ is the activation of neuron $\(i\)$ in layer $\(l\)$,
+- $\( w_{ij}^{(l)} \)$ is the weight connecting neuron $\(j\)$ in layer $\(l-1\)$ to neuron $\(i\)$ in layer $\(l\)$,
+- $\( b_i^{(l)} \)$ is the bias of neuron $\(i\)$ in layer $\(l\)$,
+- $\( \sigma \)$ is the activation function.
+
+#### Error (Loss) Calculation:
+$$\[ E = \frac{1}{2} \sum_{i} (y_i - \hat{y}_i)^2 \]$$
+
+Where:
+- $\( E \)$ is the error (loss),
+- $\( y_i \)$ is the true output,
+- $\( \hat{y}_i \)$ is the predicted output.
+
+#### Gradient Descent Update Rule:
+$$\[ w_{ij}^{(l)} = w_{ij}^{(l)} - \eta \frac{\partial E}{\partial w_{ij}^{(l)}} \]$$
+
+Where:
+- $\( \eta \)$ is the learning rate.
+
+### Benefits and Challenges:
+
+#### Benefits:
+- Backpropagation allows neural networks to learn complex relationships and patterns from data.
+- It's a foundational concept in training deep learning models.
+
+#### Challenges:
+- Vanishing and exploding gradients: Gradients can become too small or too large during backpropagation, making learning difficult.
+- Requires careful hyperparameter tuning (e.g., learning rate).
+- Susceptible to overfitting, especially on small datasets.
+
+In summary, backpropagation is a critical algorithm for training neural networks. It enables the network to adjust its parameters based on the error it makes, iteratively improving its performance on a given task. The backpropagation algorithm, along with variations and improvements, forms the basis for training deep learning models.
