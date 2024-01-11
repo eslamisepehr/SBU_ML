@@ -372,7 +372,7 @@ This model allows us to estimate the average credit card balance for females $(\
 This approach allows for a straightforward investigation of the gender difference in credit card balance while controlling for the reference category (males). The choice between dummy coding and effect coding depends on the specific requirements of the analysis and the interpretation of coefficients.
 
 
-# Three Classes of Methods in Regression Analysis
+# Three Approaches of Methods in Regression Analysis
 
 In the context of statistical modeling and regression analysis, there are three classes of methods aimed at addressing the challenges associated with predictor selection and dimensionality reduction. These methods enhance model interpretability, prevent overfitting, and improve predictive performance.
 
