@@ -877,3 +877,111 @@ Commonly used kernels include linear, polynomial, radial basis function (RBF), a
 
 In summary, SVM is a versatile algorithm used for classification and regression tasks, and its formulation involves finding a hyperplane or set of hyperplanes that maximizes the margin between classes or approximates the regression function. The kernel trick allows SVM to handle non-linear relationships by implicitly mapping data into higher-dimensional spaces.
 
+
+## Reinforcement Learning (RL)
+
+**Reinforcement Learning (RL)** is a type of machine learning paradigm where an agent learns to make decisions by interacting with an environment. The agent learns to achieve a goal in an uncertain and potentially complex environment through trial and error. Reinforcement learning is inspired by behavioral psychology and is often used in scenarios where explicit training datasets are not available.
+
+### Key Components and Concepts:
+
+1. **Agent:**
+   - The entity that takes actions in an environment.
+
+2. **Environment:**
+   - The external system with which the agent interacts. It represents the context in which the agent operates.
+
+3. **State:**
+   - A representation of the current situation or configuration of the environment. The state provides the necessary information for the agent to make decisions.
+
+4. **Action:**
+   - The set of possible moves or decisions that an agent can make in a given state.
+
+5. **Reward:**
+   - A numerical value that the environment returns to the agent based on the action taken in a particular state. It serves as feedback to the agent, indicating the immediate desirability of the chosen action.
+
+6. **Policy:**
+   - A strategy or mapping from states to actions, defining the agent's behavior. The policy can be deterministic or stochastic.
+
+7. **Value Function:**
+   - The expected cumulative reward an agent can obtain from a given state (or state-action pair). It helps the agent evaluate the desirability of different states or actions.
+
+8. **Exploration vs. Exploitation:**
+   - The trade-off between trying new actions (exploration) and choosing actions that are known to yield high rewards (exploitation). Striking the right balance is crucial for effective learning.
+
+9. **Discount Factor:**
+   - A parameter (often denoted by $\(\gamma\)$) that discounts the impact of future rewards in the agent's decision-making process. It determines the importance of immediate rewards compared to delayed rewards.
+
+10. **Markov Decision Process (MDP):**
+    - A mathematical framework that formalizes the RL problem, defining the states, actions, transition probabilities, rewards, and the discount factor.
+
+11. **Q-Learning:**
+    - A popular model-free reinforcement learning algorithm that learns a policy by iteratively updating the Q-values (expected cumulative rewards) associated with state-action pairs.
+
+12. **Deep Reinforcement Learning (DRL):**
+    - The integration of deep neural networks with reinforcement learning. DRL has been successful in solving complex problems, leveraging the representation learning capabilities of neural networks.
+
+Reinforcement learning has found applications in various domains, including game playing (e.g., AlphaGo), robotics, autonomous vehicles, recommendation systems, and more. The agent learns to make sequential decisions that lead to the maximization of the cumulative reward over time, adapting its strategy based on the feedback received from the environment.
+
+
+## Q-Learning
+
+**Q-Learning** is a popular reinforcement learning algorithm used for solving problems where an agent makes decisions in an environment to maximize cumulative rewards over time. It is a model-free algorithm, meaning that it doesn't require knowledge of the environment's dynamics. Instead, it learns a policy by iteratively updating its estimate of the expected cumulative reward (Q-value) associated with each state-action pair.
+
+### Q-Learning Components:
+
+1. **Q-Values $(\(Q(s, a)\))$:**
+   - The Q-values represent the expected cumulative reward for taking action $\(a\)$ in state $\(s\)$. The Q-value is updated iteratively as the agent interacts with the environment.
+
+2. **Learning Rate $(\(\alpha\))$:**
+   - A parameter that determines the extent to which the new information should overwrite the old Q-values. A smaller learning rate results in slower but more stable learning.
+
+3. **Discount Factor $(\(\gamma\))$:**
+   - A parameter that discounts the importance of future rewards. It controls the trade-off between immediate and delayed rewards.
+
+### Q-Learning Update Rule:
+
+The Q-value for a state-action pair is updated using the following rule:
+
+$$\[ Q(s, a) \leftarrow (1 - \alpha) \cdot Q(s, a) + \alpha \cdot \left[ R + \gamma \cdot \max_{a'} Q(s', a') \right] \]$$
+
+Where:
+- $\( Q(s, a) \)$ is the Q-value for taking action $\(a\)$ in state $\(s\)$,
+- $\( \alpha \)$ is the learning rate,
+- $\( R \)$ is the immediate reward after taking action $\(a\)$ in state $\(s\)$,
+- $\( \gamma \)$ is the discount factor,
+- $\( s' \)$ is the next state after taking action $\(a\)$ in state $\(s\)$,
+- $\( \max_{a'} Q(s', a') \)$ is the maximum Q-value for any action in the next state $\(s'\)$.
+
+### Q-Learning Process:
+
+1. **Initialization:**
+   - Initialize Q-values for all state-action pairs to arbitrary values.
+
+2. **Exploration-Exploitation:**
+   - Choose an action based on the current policy, which can involve exploration (trying new actions) or exploitation (choosing the action with the highest Q-value).
+
+3. **Perform Action:**
+   - Take the chosen action and observe the immediate reward and the next state.
+
+4. **Update Q-Value:**
+   - Update the Q-value for the current state-action pair using the Q-learning update rule.
+
+5. **Repeat:**
+   - Repeat steps 2-4 until the agent reaches a terminal state or a predefined number of iterations.
+
+### Q-Table:
+
+A Q-table is used to store and update Q-values for all possible state-action pairs. It is often represented as a matrix, where rows correspond to states, columns correspond to actions, and each cell contains the Q-value.
+
+#### Example Q-Table:
+
+| State | Action 1 | Action 2 | Action 3 |
+|-------|----------|----------|----------|
+| S1    | Q(S1, A1) | Q(S1, A2) | Q(S1, A3) |
+| S2    | Q(S2, A1) | Q(S2, A2) | Q(S2, A3) |
+| S3    | Q(S3, A1) | Q(S3, A2) | Q(S3, A3) |
+
+In this table:
+- $\( Q(S, A) \)$ represents the Q-value for taking action $\(A\)$ in state $\(S\)$.
+
+Q-Learning allows the agent to learn an optimal policy by updating these Q-values over multiple iterations, guiding the agent to choose actions that lead to higher cumulative rewards in the long run.
