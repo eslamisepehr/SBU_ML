@@ -985,3 +985,19 @@ In this table:
 - $\( Q(S, A) \)$ represents the Q-value for taking action $\(A\)$ in state $\(S\)$.
 
 Q-Learning allows the agent to learn an optimal policy by updating these Q-values over multiple iterations, guiding the agent to choose actions that lead to higher cumulative rewards in the long run.
+
+
+## Reinforcement Learning Methods Comparison
+
+| **Aspect**                           | **Dynamic Programming (DP)**                | **Temporal Difference (TD)**          | **Monte Carlo (MC)**                        |
+|---------------------------------------|--------------------------------------------|---------------------------------------|-------------------------------------------|
+| **Model Requirement**                 | Requires a complete model of the environment, including transition dynamics and rewards. | Model-free, does not require knowledge of the environment's dynamics. | Model-free, does not require knowledge of the environment's dynamics.                                |
+| **Online Learning**                   | Typically applied in a batch processing mode, updating based on entire sets of trajectories. | Well-suited for online learning scenarios, updates value estimates at each time step. | Often used in batch processing, updates based on entire trajectories after an episode is completed.   |
+| **Computational Cost**                | Can be computationally expensive, especially for large state and action spaces. | Generally more computationally efficient than DP. | Generally more computationally efficient than DP.                                                  |
+| **Bootstrapping**                     | Does not bootstrap; relies on the computation of value functions for all state-action pairs. | Bootstraps by updating value estimates based on other value estimates, enabling quicker learning. | Does not bootstrap; relies solely on observed returns.                                               |
+| **Exploration**                       | Exploration is not explicitly addressed due to the assumption of a perfect model. | Naturally handles exploration in unknown environments. | Naturally handles exploration in unknown environments.                                              |
+| **Sample Efficiency**                 | Less sample-efficient due to batch processing and the need to evaluate all state-action pairs. | More sample-efficient than DP, updates value estimates at each time step. | Less sample-efficient than TD, updates only after the completion of an episode.                      |
+| **Computational Efficiency**          | Can be computationally expensive, especially for large state and action spaces. | Generally more computationally efficient than DP. | Generally more computationally efficient than DP.                                                  |
+| **Handling Partial Observability**    | May face challenges in partially observable environments. | Well-suited for partially observable environments. | May face challenges in partially observable environments.                                          |
+
+In summary, the choice between DP, TD, and MC depends on factors such as the availability of a model, online vs. batch processing requirements, and the desired balance between sample efficiency and computational efficiency. Each method has its strengths and weaknesses, and the most suitable approach depends on the specific characteristics of the reinforcement learning problem at hand.
