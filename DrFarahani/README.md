@@ -1001,3 +1001,40 @@ Q-Learning allows the agent to learn an optimal policy by updating these Q-value
 | **Handling Partial Observability**    | May face challenges in partially observable environments. | Well-suited for partially observable environments. | May face challenges in partially observable environments.                                          |
 
 In summary, the choice between DP, TD, and MC depends on factors such as the availability of a model, online vs. batch processing requirements, and the desired balance between sample efficiency and computational efficiency. Each method has its strengths and weaknesses, and the most suitable approach depends on the specific characteristics of the reinforcement learning problem at hand.
+
+
+## Bias-Variance Trade-Off
+
+| **Aspect**                   | **High Bias**                                        | **High Variance**                                       | **Balanced Model**                                      |
+|------------------------------|------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| **Training Error**            | High (Underfitting)                                  | Low (Good fit)                                         | Low (Good fit)                                         |
+| **Testing Error**             | High (Poor generalization)                           | High (Overfitting)                                     | Low (Good generalization)                              |
+| **Model Complexity**          | Too simple                                           | Too complex                                            | Moderate complexity                                    |
+| **Sensitivity to Noise**      | Low (Insensitive)                                    | High (Sensitive)                                       | Moderate (Balanced sensitivity)                         |
+| **Source of Error**           | Bias-related errors dominate                         | Variance-related errors dominate                        | Trade-off between bias and variance                     |
+| **Example**                   | Linear regression with too few features (underfit)   | High-degree polynomial regression (overfit)            | Regularized linear regression, decision trees           |
+
+### Explanation:
+
+#### High Bias (Underfitting):
+
+- **Training Error:** High because the model is too simple and cannot capture the underlying patterns in the data.
+- **Testing Error:** High because the model does not generalize well to new, unseen data.
+- **Model Complexity:** Too simple, lacking the capacity to represent the true underlying relationship in the data.
+- **Sensitivity to Noise:** Low because the model is not responsive to noise or small fluctuations in the data.
+
+#### High Variance (Overfitting):
+
+- **Training Error:** Low because the model is complex enough to fit the training data very well.
+- **Testing Error:** High because the model is too tailored to the training data and does not generalize well.
+- **Model Complexity:** Too complex, capturing noise and fluctuations in the training data.
+- **Sensitivity to Noise:** High because the model is overly responsive to noise, capturing patterns that may not generalize.
+
+#### Balanced Model:
+
+- **Training Error:** Low as the model captures the underlying patterns without fitting the noise.
+- **Testing Error:** Low because the model generalizes well to new, unseen data.
+- **Model Complexity:** Moderate, striking a balance between simplicity and complexity.
+- **Sensitivity to Noise:** Moderate, capturing relevant patterns while avoiding overfitting to noise.
+
+The bias-variance trade-off involves finding the optimal level of model complexity that minimizes both bias and variance, leading to a model that generalizes well to new data.
