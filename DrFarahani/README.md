@@ -1038,3 +1038,42 @@ In summary, the choice between DP, TD, and MC depends on factors such as the ava
 - **Sensitivity to Noise:** Moderate, capturing relevant patterns while avoiding overfitting to noise.
 
 The bias-variance trade-off involves finding the optimal level of model complexity that minimizes both bias and variance, leading to a model that generalizes well to new data.
+
+
+## Data Scaling Using Normalization
+
+**Data scaling using normalization** is a preprocessing technique in which numerical features of a dataset are transformed to a specific range or scale. The goal is to ensure that all features contribute equally to the model's training process, preventing certain features from dominating due to their larger scales. Normalization is particularly important for machine learning algorithms that are sensitive to the scale of input features, such as gradient-based optimization algorithms (e.g., gradient descent).
+
+Normalization is often used interchangeably with feature scaling, and it involves transforming the values of each feature to a common scale. One common method for normalization is Min-Max scaling, which scales the values to a specific range, usually [0, 1]. The formula for Min-Max scaling is as follows:
+
+$$\[ X_{\text{normalized}} = \frac{{X - X_{\text{min}}}}{{X_{\text{max}} - X_{\text{min}}}} \]$$
+
+Where:
+- $\(X\)$ is the original value of a feature,
+- $\(X_{\text{min}}\)$ is the minimum value of that feature in the dataset,
+- $\(X_{\text{max}}\)$ is the maximum value of that feature in the dataset.
+
+The result of Min-Max scaling is that the values of the feature will be transformed to the range [0, 1].
+
+Other normalization techniques include Z-score normalization (standardization), which scales the values to have a mean of 0 and a standard deviation of 1. The formula for Z-score normalization is as follows:
+
+$$\[ X_{\text{normalized}} = \frac{{X - \mu}}{{\sigma}} \]$$
+
+Where:
+- $\(X\)$ is the original value of a feature,
+- $\(\mu\)$ is the mean of that feature in the dataset,
+- $\(\sigma\)$ is the standard deviation of that feature in the dataset.
+
+Z-score normalization results in a distribution with a mean of 0 and a standard deviation of 1.
+
+### Benefits of Normalization:
+
+1. **Improved Convergence:** Normalization helps gradient-based optimization algorithms converge faster since features are on a similar scale.
+
+2. **Equal Weightage:** Normalization ensures that all features contribute equally to the model training process, preventing one feature from dominating due to a larger scale.
+
+3. **Model Performance:** Normalization can lead to improved model performance, especially for algorithms that are sensitive to feature scales, such as support vector machines and k-nearest neighbors.
+
+4. **Interpretability:** Normalized features can make the model more interpretable and easier to understand, as the impact of each feature is more consistent.
+
+In summary, normalization is a crucial preprocessing step to ensure that features are on a similar scale, which can significantly impact the performance and convergence of machine learning algorithms.
