@@ -802,3 +802,78 @@ Bayes' Theorem provides a principled way to update our beliefs about class proba
 - SVR can be computationally intensive, especially with large datasets. However, its scalability can be improved using techniques such as the sequential minimal optimization (SMO) algorithm.
 
 In summary, Support Vector Regression (SVR) is a regression algorithm that employs the principles of support vector machines to model relationships between input variables and output variables, especially when dealing with non-linear and complex patterns.
+
+
+## Support Vector Machine (SVM)
+
+**Support Vector Machine (SVM)** is a supervised machine learning algorithm that is used for both classification and regression tasks. SVM is particularly effective in high-dimensional spaces and is capable of constructing a hyperplane or set of hyperplanes in a high-dimensional space that can be used for classification or regression.
+
+### SVM for Classification:
+
+### Objective:
+The primary objective of SVM for classification is to find a hyperplane that separates the data into classes while maximizing the margin between classes.
+
+### Hyperplane Equation:
+In a two-dimensional space (for simplicity), the equation of the hyperplane is given by:
+
+$$\[ f(\mathbf{x}) = \mathbf{w} \cdot \mathbf{x} + b = 0 \]$$
+
+Where:
+- $\(\mathbf{w}\)$ is the weight vector,
+- $\(\mathbf{x}\)$ is the input vector,
+- $\(b\)$ is the bias term.
+
+The decision boundary is defined by the points where $\(f(\mathbf{x}) = 0\)$.
+
+### Margin:
+The margin is the distance between the hyperplane and the nearest data point from either class. SVM aims to maximize this margin.
+
+### Classification Rule:
+The classification rule is based on the sign of $\(f(\mathbf{x})\)$:
+- If $\(f(\mathbf{x}) > 0\)$, then $\(\mathbf{x}\)$ is classified as one class.
+- If $\(f(\mathbf{x}) < 0\)$, then $\(\mathbf{x}\)$ is classified as the other class.
+
+### Objective Function:
+The objective is to maximize the margin while ensuring that data points are correctly classified. The optimization problem can be formulated as:
+
+$$\[ \text{Maximize } M \text{ subject to } y_i(\mathbf{w} \cdot \mathbf{x}_i + b) \geq M \text{ for } i = 1, 2, \ldots, n \]$$
+
+Where:
+- $\(M\)$ is the margin,
+- $\(y_i\)$ is the class label of data point $\(\mathbf{x}_i\)$.
+
+### SVM for Regression (Support Vector Regression - SVR):
+
+#### Objective:
+For regression tasks, SVM aims to find a hyperplane that approximates the mapping from input to output values.
+
+#### Hyperplane Equation:
+The hyperplane equation for regression is similar to the classification case:
+
+$$\[ f(\mathbf{x}) = \mathbf{w} \cdot \mathbf{x} + b \]$$
+
+#### Loss Function:
+The loss function is introduced to penalize deviations from the actual output values. The objective is to minimize the loss:
+
+$$\[ \text{Minimize } \frac{1}{2} \|\mathbf{w}\|^2 + C \sum_{i=1}^{n} \max(0, |y_i - f(\mathbf{x}_i)| - \epsilon) \]$$
+
+Where:
+- $\(\epsilon\)$ is the epsilon-insensitive tube, allowing a margin of error,
+- $\(C\)$ is a regularization parameter,
+- $\(y_i\)$ is the true output value of data point $\(\mathbf{x}_i\)$.
+
+#### Kernel Trick:
+
+The SVM formulation can be extended to handle non-linear relationships using the kernel trick. The idea is to implicitly map the input data into a higher-dimensional space where a hyperplane can separate the classes or approximate the regression function.
+
+#### Kernel Trick Equation:
+$$\[ K(\mathbf{x}_i, \mathbf{x}_j) = \phi(\mathbf{x}_i) \cdot \phi(\mathbf{x}_j) \]$$
+
+Where:
+- $\(K(\cdot, \cdot)\)$ is the kernel function,
+- $\(\phi(\cdot)\)$ is the transformation function.
+
+Commonly used kernels include linear, polynomial, radial basis function (RBF), and sigmoid kernels.
+
+In summary, SVM is a versatile algorithm used for classification and regression tasks, and its formulation involves finding a hyperplane or set of hyperplanes that maximizes the margin between classes or approximates the regression function. The kernel trick allows SVM to handle non-linear relationships by implicitly mapping data into higher-dimensional spaces.
+
