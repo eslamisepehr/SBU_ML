@@ -765,3 +765,40 @@ Bayes' Theorem provides a principled way to update our beliefs about class proba
 | **Data Distribution**        | Less sensitive to the distribution of the data.              | Assumes normality, performs well when assumptions are met.     |
 | **Use Cases**               | Commonly used in machine learning and statistics.            | Commonly used in statistics and pattern recognition.            |
 
+
+## Support Vector Regression (SVR)
+
+**SVR** stands for Support Vector Regression, which is a type of regression algorithm that uses support vector machines (SVM) for regression tasks. SVR is particularly effective for tasks where the relationship between the input variables and the output variable is non-linear. It is an extension of the support vector machine algorithm, which is primarily used for classification tasks.
+
+### 1. Objective of SVR:
+- The primary goal of SVR is to find a function that best represents the mapping from the input space to the output space in a way that minimizes the prediction error.
+
+### 2. Support Vectors:
+- SVR, like SVM, relies on support vectors. These are the data points that have the most significant impact on defining the optimal hyperplane (or in the case of SVR, the optimal regression line or surface).
+
+### 3. Hyperplane in SVR:
+- In SVR, the algorithm seeks to find a hyperplane that best fits the data. The hyperplane is determined by the support vectors and is chosen to maximize the margin (distance) between the hyperplane and the data points.
+
+### 4. Epsilon-Insensitive Tube:
+- SVR introduces the concept of an epsilon-insensitive tube around the hyperplane. Data points within this tube are considered to have acceptable errors, and their deviations from the hyperplane do not contribute to the loss function.
+
+### 5. Loss Function:
+- The loss function in SVR penalizes points outside the epsilon-insensitive tube. The objective is to minimize the sum of these penalties while keeping as many points as possible within the tube.
+  - Loss Function: $$\( L(\mathbf{w}, b, \xi, \hat{\xi}) = \frac{1}{2} \|\mathbf{w}\|^2 + C \sum_{i=1}^{n} (\xi_i + \hat{\xi}_i) \)$$
+
+### 6. Kernel Trick:
+- SVR often utilizes the kernel trick, similar to SVM, to transform the input data into a higher-dimensional space. This allows SVR to capture non-linear relationships between variables.
+
+### 7. C and Epsilon Parameters:
+- SVR includes parameters such as $\(C\)$ and $\(\epsilon\)$. The parameter $\(C\)$ controls the trade-off between having a smooth decision boundary and classifying the training points correctly. The parameter $\(\epsilon\)$ sets the width of the epsilon-insensitive tube.
+
+### 8. Types of SVR Kernels:
+- Commonly used kernels in SVR include linear, polynomial, radial basis function (RBF), and sigmoid kernels. The choice of the kernel depends on the nature of the data and the problem.
+
+### 9. Handling Non-Linear Relationships:
+- SVR is particularly useful when dealing with non-linear relationships between variables, as it can model complex patterns and capture intricate structures in the data.
+
+### 10. Scalability and Computational Efficiency:
+- SVR can be computationally intensive, especially with large datasets. However, its scalability can be improved using techniques such as the sequential minimal optimization (SMO) algorithm.
+
+In summary, Support Vector Regression (SVR) is a regression algorithm that employs the principles of support vector machines to model relationships between input variables and output variables, especially when dealing with non-linear and complex patterns.
